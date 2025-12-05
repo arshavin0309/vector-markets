@@ -1,3 +1,91 @@
 @media (min-width: 1200px) {
-    
+    .btn {
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .main-platform {
+        &__buttons {
+            .swiper-slide {
+                &:hover {
+                    color: var(--hover);
+                }
+
+                &-thumb-active {
+                    &:hover {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    .header {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--hover);
+                    }
+                }
+            }
+        }
+
+        &__logo {
+            &:hover {
+                path {
+                    fill: var(--hover);
+                }
+            }
+        }
+    }
+
+    .footer {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--hover);
+                    }
+                }
+            }
+        }
+
+        &__docs {
+            a {
+                &:hover {
+                    color: var(--hover);
+                }
+            }
+        }
+
+        &__contact {
+            &:hover {
+                color: var(--hover);
+
+                svg {
+                    path {
+                        stroke: var(--hover)
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-arrow {
+        &:hover {
+            transform: rotate(45deg);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
 }
