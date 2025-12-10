@@ -27,6 +27,22 @@
         }
     }
 
+    .main-analytics {
+        &__buttons {
+            .swiper-slide {
+                &:hover {
+                    color: var(--hover);
+                }
+
+                &-thumb-active {
+                    &:hover {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
     .header {
         .menu {
             &>.menu-item {
