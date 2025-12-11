@@ -30,3 +30,7 @@ let mainAnalyticsSwiper = new Swiper(".main-analytics__swiper", {
         swiper: mainAnalyticsButtons,
     },
 });
+
+let mainAboutSwiper = new Swiper(".main-about__swiper", {
+    slidesPerView: 5,
+});

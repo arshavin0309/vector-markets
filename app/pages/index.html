@@ -1,9 +1,11 @@
 @@include('../components/header.html', {"title": "Главная"})
 
 <main>
-    <div class="gradient-1"></div>
-    <div class="gradient-2"></div>
-    <div class="bg-image"></div>
+    <div class="main-bg">
+        <div class="main-bg__gradient-1"></div>
+        <div class="main-bg__gradient-2"></div>
+        <div class="main-bg__image"></div>
+    </div>
 
     <section class="main-hero">
         <div class="container">
@@ -100,7 +102,7 @@
         </div>
     </section>
 
-    <section class="main-platform">
+    <section class="main-platform" id="platform">
         <div class="container">
             <div class="main-platform__top">
                 <h2>Trading platform</h2>
@@ -210,7 +212,7 @@
         </div>
     </section>
 
-    <section class="main-account">
+    <section class="main-account" id="types">
         <div class="container">
             <h2>Find your ideal trading account</h2>
             <p class="texts">Your trading journey is unique. Our solutions are built to adapt, providing the right tools and support whether you're just starting or trading at an advanced level.</p>
@@ -258,7 +260,7 @@
                 </div>
 
                 <div class="main-account__item pro">
-                    <div class="main-account__tag">Popular</div>
+                    <div class="main-account__tag glass">Popular</div>
 
                     <div class="main-account__box">
                         <h3>Pro account</h3>
@@ -340,7 +342,7 @@
                         </div>
 
                         <div class="main-start__bottom">
-                            <div class="main-start__step">Step 1</div>
+                            <div class="main-start__step glass">Step 1</div>
 
                             <a href="##" class="btn-arrow">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -357,7 +359,7 @@
                         </div>
 
                         <div class="main-start__bottom">
-                            <div class="main-start__step">Step 2</div>
+                            <div class="main-start__step glass">Step 2</div>
                         </div>
                     </div>
 
@@ -368,7 +370,7 @@
                         </div>
 
                         <div class="main-start__bottom">
-                            <div class="main-start__step">Step 3</div>
+                            <div class="main-start__step glass">Step 3</div>
                         </div>
                     </div>
 
@@ -379,7 +381,7 @@
                         </div>
 
                         <div class="main-start__bottom">
-                            <div class="main-start__step">Step 4</div>
+                            <div class="main-start__step glass">Step 4</div>
 
                             <a href="##" class="btn-arrow">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -393,7 +395,7 @@
         </div>
     </section>
 
-    <section class="main-analytics">
+    <section class="main-analytics" id="analytics">
         <div class="container">
             <h2>Premium market analytics for successful trading</h2>
 
@@ -755,7 +757,7 @@
         </div>
     </section>
 
-    <section class="main-about">
+    <section class="main-about" id="about">
         <div class="container">
             <h2>About Vector Markets</h2>
             <p class="texts">At Vector Markets, we believe that investing isn't just about numbers—it's about direction and momentum. A vector is a force defined by both its strength and its precise direction. That’s the power we put in your hands.</p>
@@ -785,7 +787,149 @@
                 <img src="images/main-about-image.avif" class="main-about__image">
             </div>
 
-            <div class="main-about__calendar"></div>
+            <div class="swiper main-about__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2>2012</h2>
+
+                        <div class="swiper-slide-box">
+                            <div class="square"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                            <div class="line-5"></div>
+
+                            <div class="glass">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_61_1666)">
+                                        <path d="M31.0833 12.8999L26.0833 8.54995L27.5333 2.03328C27.6025 1.69392 27.5643 1.34143 27.4239 1.02482C27.2835 0.708209 27.0479 0.443194 26.75 0.266613C26.4727 0.076715 26.1444 -0.0249023 25.8083 -0.0249023C25.4722 -0.0249023 25.144 0.076715 24.8667 0.266613L20 3.78328L15.1333 0.299946C14.856 0.110048 14.5278 0.00843099 14.1917 0.00843099C13.8556 0.00843099 13.5273 0.110048 13.25 0.299946C12.9703 0.48692 12.7538 0.754147 12.6289 1.06649C12.5039 1.37884 12.4764 1.72168 12.55 2.04995L14 8.56661L9 12.9166C8.7551 13.1283 8.57715 13.4068 8.4879 13.7179C8.39864 14.0291 8.40194 14.3596 8.49739 14.6689C8.59284 14.9782 8.77631 15.2531 9.0254 15.4598C9.27448 15.6666 9.57839 15.7964 9.9 15.8333L16.3833 16.5499L18.2167 21.6666H15C14.1159 21.6666 13.2681 22.0178 12.643 22.6429C12.0179 23.268 11.6667 24.1159 11.6667 24.9999V38.3333H10.8333C10.6123 38.3333 10.4004 38.4211 10.2441 38.5774C10.0878 38.7336 10 38.9456 10 39.1666C10 39.3876 10.0878 39.5996 10.2441 39.7559C10.4004 39.9122 10.6123 40 10.8333 40H29.1667C29.3877 40 29.5996 39.9122 29.7559 39.7559C29.9122 39.5996 30 39.3876 30 39.1666C30 38.9456 29.9122 38.7336 29.7559 38.5774C29.5996 38.4211 29.3877 38.3333 29.1667 38.3333H28.3333V24.9999C28.3333 24.1159 27.9821 23.268 27.357 22.6429C26.7319 22.0178 25.8841 21.6666 25 21.6666H21.7833L23.7 16.5499L30.1833 15.8333C30.505 15.7964 30.8089 15.6666 31.0579 15.4598C31.307 15.2531 31.4905 14.9782 31.586 14.6689C31.6814 14.3596 31.6847 14.0291 31.5954 13.7179C31.5062 13.4068 31.3282 13.1283 31.0833 12.9166V12.8999ZM25 25.8333V30.8333C25 31.0543 24.9122 31.2663 24.7559 31.4225C24.5996 31.5788 24.3877 31.6666 24.1667 31.6666H15.8333C15.6123 31.6666 15.4004 31.5788 15.2441 31.4225C15.0878 31.2663 15 31.0543 15 30.8333V25.8333C15 25.6123 15.0878 25.4003 15.2441 25.244C15.4004 25.0877 15.6123 24.9999 15.8333 24.9999H24.1667C24.3877 24.9999 24.5996 25.0877 24.7559 25.244C24.9122 25.4003 25 25.6123 25 25.8333Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_61_1666">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <p>Launched our proprietary trading platform, VectorTrader Pro™, setting a new standard for intuitive and powerful retail market access.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h2>2018</h2>
+
+                        <div class="swiper-slide-box">
+                            <div class="square"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                            <div class="line-5"></div>
+
+                            <div class="glass">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_61_1666)">
+                                        <path d="M31.0833 12.8999L26.0833 8.54995L27.5333 2.03328C27.6025 1.69392 27.5643 1.34143 27.4239 1.02482C27.2835 0.708209 27.0479 0.443194 26.75 0.266613C26.4727 0.076715 26.1444 -0.0249023 25.8083 -0.0249023C25.4722 -0.0249023 25.144 0.076715 24.8667 0.266613L20 3.78328L15.1333 0.299946C14.856 0.110048 14.5278 0.00843099 14.1917 0.00843099C13.8556 0.00843099 13.5273 0.110048 13.25 0.299946C12.9703 0.48692 12.7538 0.754147 12.6289 1.06649C12.5039 1.37884 12.4764 1.72168 12.55 2.04995L14 8.56661L9 12.9166C8.7551 13.1283 8.57715 13.4068 8.4879 13.7179C8.39864 14.0291 8.40194 14.3596 8.49739 14.6689C8.59284 14.9782 8.77631 15.2531 9.0254 15.4598C9.27448 15.6666 9.57839 15.7964 9.9 15.8333L16.3833 16.5499L18.2167 21.6666H15C14.1159 21.6666 13.2681 22.0178 12.643 22.6429C12.0179 23.268 11.6667 24.1159 11.6667 24.9999V38.3333H10.8333C10.6123 38.3333 10.4004 38.4211 10.2441 38.5774C10.0878 38.7336 10 38.9456 10 39.1666C10 39.3876 10.0878 39.5996 10.2441 39.7559C10.4004 39.9122 10.6123 40 10.8333 40H29.1667C29.3877 40 29.5996 39.9122 29.7559 39.7559C29.9122 39.5996 30 39.3876 30 39.1666C30 38.9456 29.9122 38.7336 29.7559 38.5774C29.5996 38.4211 29.3877 38.3333 29.1667 38.3333H28.3333V24.9999C28.3333 24.1159 27.9821 23.268 27.357 22.6429C26.7319 22.0178 25.8841 21.6666 25 21.6666H21.7833L23.7 16.5499L30.1833 15.8333C30.505 15.7964 30.8089 15.6666 31.0579 15.4598C31.307 15.2531 31.4905 14.9782 31.586 14.6689C31.6814 14.3596 31.6847 14.0291 31.5954 13.7179C31.5062 13.4068 31.3282 13.1283 31.0833 12.9166V12.8999ZM25 25.8333V30.8333C25 31.0543 24.9122 31.2663 24.7559 31.4225C24.5996 31.5788 24.3877 31.6666 24.1667 31.6666H15.8333C15.6123 31.6666 15.4004 31.5788 15.2441 31.4225C15.0878 31.2663 15 31.0543 15 30.8333V25.8333C15 25.6123 15.0878 25.4003 15.2441 25.244C15.4004 25.0877 15.6123 24.9999 15.8333 24.9999H24.1667C24.3877 24.9999 24.5996 25.0877 24.7559 25.244C24.9122 25.4003 25 25.6123 25 25.8333Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_61_1666">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <p>Honored with the "Best New Brokerage" award by Global Finance Review for our innovative approach to the industry.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h2>2021</h2>
+
+                        <div class="swiper-slide-box">
+                            <div class="square"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                            <div class="line-5"></div>
+
+                            <div class="glass">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_61_1666)">
+                                        <path d="M31.0833 12.8999L26.0833 8.54995L27.5333 2.03328C27.6025 1.69392 27.5643 1.34143 27.4239 1.02482C27.2835 0.708209 27.0479 0.443194 26.75 0.266613C26.4727 0.076715 26.1444 -0.0249023 25.8083 -0.0249023C25.4722 -0.0249023 25.144 0.076715 24.8667 0.266613L20 3.78328L15.1333 0.299946C14.856 0.110048 14.5278 0.00843099 14.1917 0.00843099C13.8556 0.00843099 13.5273 0.110048 13.25 0.299946C12.9703 0.48692 12.7538 0.754147 12.6289 1.06649C12.5039 1.37884 12.4764 1.72168 12.55 2.04995L14 8.56661L9 12.9166C8.7551 13.1283 8.57715 13.4068 8.4879 13.7179C8.39864 14.0291 8.40194 14.3596 8.49739 14.6689C8.59284 14.9782 8.77631 15.2531 9.0254 15.4598C9.27448 15.6666 9.57839 15.7964 9.9 15.8333L16.3833 16.5499L18.2167 21.6666H15C14.1159 21.6666 13.2681 22.0178 12.643 22.6429C12.0179 23.268 11.6667 24.1159 11.6667 24.9999V38.3333H10.8333C10.6123 38.3333 10.4004 38.4211 10.2441 38.5774C10.0878 38.7336 10 38.9456 10 39.1666C10 39.3876 10.0878 39.5996 10.2441 39.7559C10.4004 39.9122 10.6123 40 10.8333 40H29.1667C29.3877 40 29.5996 39.9122 29.7559 39.7559C29.9122 39.5996 30 39.3876 30 39.1666C30 38.9456 29.9122 38.7336 29.7559 38.5774C29.5996 38.4211 29.3877 38.3333 29.1667 38.3333H28.3333V24.9999C28.3333 24.1159 27.9821 23.268 27.357 22.6429C26.7319 22.0178 25.8841 21.6666 25 21.6666H21.7833L23.7 16.5499L30.1833 15.8333C30.505 15.7964 30.8089 15.6666 31.0579 15.4598C31.307 15.2531 31.4905 14.9782 31.586 14.6689C31.6814 14.3596 31.6847 14.0291 31.5954 13.7179C31.5062 13.4068 31.3282 13.1283 31.0833 12.9166V12.8999ZM25 25.8333V30.8333C25 31.0543 24.9122 31.2663 24.7559 31.4225C24.5996 31.5788 24.3877 31.6666 24.1667 31.6666H15.8333C15.6123 31.6666 15.4004 31.5788 15.2441 31.4225C15.0878 31.2663 15 31.0543 15 30.8333V25.8333C15 25.6123 15.0878 25.4003 15.2441 25.244C15.4004 25.0877 15.6123 24.9999 15.8333 24.9999H24.1667C24.3877 24.9999 24.5996 25.0877 24.7559 25.244C24.9122 25.4003 25 25.6123 25 25.8333Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_61_1666">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <p>Successfully expanded our global footprint by establishing key hubs in Singapore and Tokyo to serve the growing Asian markets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h2>2023</h2>
+
+                        <div class="swiper-slide-box">
+                            <div class="square"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                            <div class="line-5"></div>
+
+                            <div class="glass">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_61_1666)">
+                                        <path d="M31.0833 12.8999L26.0833 8.54995L27.5333 2.03328C27.6025 1.69392 27.5643 1.34143 27.4239 1.02482C27.2835 0.708209 27.0479 0.443194 26.75 0.266613C26.4727 0.076715 26.1444 -0.0249023 25.8083 -0.0249023C25.4722 -0.0249023 25.144 0.076715 24.8667 0.266613L20 3.78328L15.1333 0.299946C14.856 0.110048 14.5278 0.00843099 14.1917 0.00843099C13.8556 0.00843099 13.5273 0.110048 13.25 0.299946C12.9703 0.48692 12.7538 0.754147 12.6289 1.06649C12.5039 1.37884 12.4764 1.72168 12.55 2.04995L14 8.56661L9 12.9166C8.7551 13.1283 8.57715 13.4068 8.4879 13.7179C8.39864 14.0291 8.40194 14.3596 8.49739 14.6689C8.59284 14.9782 8.77631 15.2531 9.0254 15.4598C9.27448 15.6666 9.57839 15.7964 9.9 15.8333L16.3833 16.5499L18.2167 21.6666H15C14.1159 21.6666 13.2681 22.0178 12.643 22.6429C12.0179 23.268 11.6667 24.1159 11.6667 24.9999V38.3333H10.8333C10.6123 38.3333 10.4004 38.4211 10.2441 38.5774C10.0878 38.7336 10 38.9456 10 39.1666C10 39.3876 10.0878 39.5996 10.2441 39.7559C10.4004 39.9122 10.6123 40 10.8333 40H29.1667C29.3877 40 29.5996 39.9122 29.7559 39.7559C29.9122 39.5996 30 39.3876 30 39.1666C30 38.9456 29.9122 38.7336 29.7559 38.5774C29.5996 38.4211 29.3877 38.3333 29.1667 38.3333H28.3333V24.9999C28.3333 24.1159 27.9821 23.268 27.357 22.6429C26.7319 22.0178 25.8841 21.6666 25 21.6666H21.7833L23.7 16.5499L30.1833 15.8333C30.505 15.7964 30.8089 15.6666 31.0579 15.4598C31.307 15.2531 31.4905 14.9782 31.586 14.6689C31.6814 14.3596 31.6847 14.0291 31.5954 13.7179C31.5062 13.4068 31.3282 13.1283 31.0833 12.9166V12.8999ZM25 25.8333V30.8333C25 31.0543 24.9122 31.2663 24.7559 31.4225C24.5996 31.5788 24.3877 31.6666 24.1667 31.6666H15.8333C15.6123 31.6666 15.4004 31.5788 15.2441 31.4225C15.0878 31.2663 15 31.0543 15 30.8333V25.8333C15 25.6123 15.0878 25.4003 15.2441 25.244C15.4004 25.0877 15.6123 24.9999 15.8333 24.9999H24.1667C24.3877 24.9999 24.5996 25.0877 24.7559 25.244C24.9122 25.4003 25 25.6123 25 25.8333Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_61_1666">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <p>Recognized as "Industry Leader in Transparency" by the Financial Excellence Awards for our commitment to clear and fair pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <h2>2025</h2>
+
+                        <div class="swiper-slide-box">
+                            <div class="square"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                            <div class="line-5"></div>
+
+                            <div class="glass">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_61_1666)">
+                                        <path d="M31.0833 12.8999L26.0833 8.54995L27.5333 2.03328C27.6025 1.69392 27.5643 1.34143 27.4239 1.02482C27.2835 0.708209 27.0479 0.443194 26.75 0.266613C26.4727 0.076715 26.1444 -0.0249023 25.8083 -0.0249023C25.4722 -0.0249023 25.144 0.076715 24.8667 0.266613L20 3.78328L15.1333 0.299946C14.856 0.110048 14.5278 0.00843099 14.1917 0.00843099C13.8556 0.00843099 13.5273 0.110048 13.25 0.299946C12.9703 0.48692 12.7538 0.754147 12.6289 1.06649C12.5039 1.37884 12.4764 1.72168 12.55 2.04995L14 8.56661L9 12.9166C8.7551 13.1283 8.57715 13.4068 8.4879 13.7179C8.39864 14.0291 8.40194 14.3596 8.49739 14.6689C8.59284 14.9782 8.77631 15.2531 9.0254 15.4598C9.27448 15.6666 9.57839 15.7964 9.9 15.8333L16.3833 16.5499L18.2167 21.6666H15C14.1159 21.6666 13.2681 22.0178 12.643 22.6429C12.0179 23.268 11.6667 24.1159 11.6667 24.9999V38.3333H10.8333C10.6123 38.3333 10.4004 38.4211 10.2441 38.5774C10.0878 38.7336 10 38.9456 10 39.1666C10 39.3876 10.0878 39.5996 10.2441 39.7559C10.4004 39.9122 10.6123 40 10.8333 40H29.1667C29.3877 40 29.5996 39.9122 29.7559 39.7559C29.9122 39.5996 30 39.3876 30 39.1666C30 38.9456 29.9122 38.7336 29.7559 38.5774C29.5996 38.4211 29.3877 38.3333 29.1667 38.3333H28.3333V24.9999C28.3333 24.1159 27.9821 23.268 27.357 22.6429C26.7319 22.0178 25.8841 21.6666 25 21.6666H21.7833L23.7 16.5499L30.1833 15.8333C30.505 15.7964 30.8089 15.6666 31.0579 15.4598C31.307 15.2531 31.4905 14.9782 31.586 14.6689C31.6814 14.3596 31.6847 14.0291 31.5954 13.7179C31.5062 13.4068 31.3282 13.1283 31.0833 12.9166V12.8999ZM25 25.8333V30.8333C25 31.0543 24.9122 31.2663 24.7559 31.4225C24.5996 31.5788 24.3877 31.6666 24.1667 31.6666H15.8333C15.6123 31.6666 15.4004 31.5788 15.2441 31.4225C15.0878 31.2663 15 31.0543 15 30.8333V25.8333C15 25.6123 15.0878 25.4003 15.2441 25.244C15.4004 25.0877 15.6123 24.9999 15.8333 24.9999H24.1667C24.3877 24.9999 24.5996 25.0877 24.7559 25.244C24.9122 25.4003 25 25.6123 25 25.8333Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_61_1666">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <p>Reached a significant milestone of over 1 million active clients globally, facilitating a daily trading volume exceeding $5 billion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -799,7 +943,7 @@
                     <p class="texts">"The platform is incredibly beginner-friendly, and the support team had me trading confidently in no time."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/john.avif" alt="">
                         <div class="main-traders__name">John M.</div>
                     </div>
                 </div>
@@ -808,7 +952,7 @@
                     <p class="texts">"I get the combination I need: low spreads, fast withdrawals, and completely transparent pricing."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/amy.avif" alt="">
                         <div class="main-traders__name">Amy H.</div>
                     </div>
                 </div>
@@ -817,7 +961,7 @@
                     <p class="texts">"It's the execution speed and powerful analytics that give me a consistent edge in the markets."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/emma.avif" alt="">
                         <div class="main-traders__name">Emma K.</div>
                     </div>
                 </div>
@@ -826,7 +970,7 @@
                     <p class="texts">"After years of trading, their reliability and professional service are truly unmatched in the industry."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/jack.avif" alt="">
                         <div class="main-traders__name">Jack W.</div>
                     </div>
                 </div>
@@ -835,7 +979,7 @@
                     <p class="texts">"Finally, a broker that delivers—fast execution, intuitive tools, and a platform that just works."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/james.avif" alt="">
                         <div class="main-traders__name">James S.</div>
                     </div>
                 </div>
@@ -844,7 +988,7 @@
                     <p class="texts">"The transparency and the quality of market insights provided are genuinely top-tier."</p>
 
                     <div class="main-traders__author">
-                        <img src="" alt="">
+                        <img src="images/sam.avif" alt="">
                         <div class="main-traders__name">Sam K.</div>
                     </div>
                 </div>
