@@ -104,4 +104,14 @@
             }
         }
     }
+
+    .main-contacts {
+        &__close {
+            &:hover {
+                path {
+                    fill: var(--hover);
+                }
+            }
+        }
+    }
 }
