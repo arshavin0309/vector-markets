@@ -23,4 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
             closeForm();
         }
     });
+
+    // Клик снаружи контейнера закрывает форму
+    mainContacts.addEventListener('click', function (e) {
+        // если клик **не внутри** .main-contacts__container 
+        if (!e.target.closest('.main-contacts__container')) {
+            closeForm();
+        }
+    });
+
 });
