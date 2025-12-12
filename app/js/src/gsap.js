@@ -38,4 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.body.classList.remove('preload');
+
+    gsap.to(".main-bg__image", {
+        rotate: 360,               // полный оборот
+        ease: "none",
+        scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,          // плавная связка с прокруткой
+        }
+    });
+
 })

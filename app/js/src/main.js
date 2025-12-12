@@ -23,6 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
             closeForm();
         }
     });
-
-    // mainContacts.classList.add('show'); //тест
 });
