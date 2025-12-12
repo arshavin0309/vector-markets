@@ -52,7 +52,7 @@ let mainHeroSwiper = new Swiper('.main-hero__swiper', {
 });
 
 let scrollDirection = 1; // 1 = вперёд, -1 = назад
-let scrollSpeed = 1;   // пикселей за кадр
+let scrollSpeed = 0.3;   // пикселей за кадр
 let isScrolling = false; // флаг автоскролла
 
 function autoScroll() {
