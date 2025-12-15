@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1️⃣ Секция
         tl.from(section, {
             opacity: 0,
-            x: 40,
+            x: 0,
             duration: 0.4,
             ease: "power2.out"
         });
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3️⃣ Параграфы и списки
         tl.from(section.querySelectorAll("p, ul, ol"), {
-            x: -30,
+            x: 0,
             opacity: 0,
             duration: 0.6,
             ease: "power2.out",
