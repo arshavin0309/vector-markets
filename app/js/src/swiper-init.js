@@ -30,18 +30,6 @@ let mainAboutSwiper = new Swiper(".main-about__swiper", {
     slidesPerView: 5,
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 let mainHeroSwiper = new Swiper('.main-hero__swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -52,13 +40,21 @@ let mainHeroSwiper = new Swiper('.main-hero__swiper', {
 });
 
 let scrollDirection = 1; // 1 = вперёд, -1 = назад
-let scrollSpeed = 0.3;   // пикселей за кадр
-let isScrolling = false; // флаг автоскролла
+let scrollSpeed = 50;   // пикселей в секунду
+let isScrolling = false;
+let lastTime = null;
 
-function autoScroll() {
+function autoScroll(time) {
     if (!isScrolling) return;
 
-    let newTranslate = mainHeroSwiper.translate - scrollSpeed * scrollDirection;
+    if (lastTime === null) lastTime = time;
+    const delta = time - lastTime; // миллисекунды с последнего кадра
+    lastTime = time;
+
+    // Переводим скорость в пиксели за кадр
+    const movement = (scrollSpeed * delta) / 1000; // пиксели, учитывая delta времени
+    let newTranslate = mainHeroSwiper.translate - movement * scrollDirection;
+
     const maxTranslate = 0;
     const minTranslate = mainHeroSwiper.maxTranslate();
 
@@ -66,6 +62,7 @@ function autoScroll() {
     else if (newTranslate > maxTranslate) scrollDirection = 1;
 
     mainHeroSwiper.setTranslate(newTranslate);
+
     requestAnimationFrame(autoScroll);
 }
 
@@ -73,12 +70,16 @@ function autoScroll() {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            isScrolling = true;
-            requestAnimationFrame(autoScroll);
+            if (!isScrolling) {
+                isScrolling = true;
+                lastTime = null;
+                requestAnimationFrame(autoScroll);
+            }
         } else {
             isScrolling = false;
         }
     });
-}, { threshold: 0.1 }); // запускается, когда хотя бы 10% слайдера видны
+}, { threshold: 0.1 });
 
 observer.observe(document.querySelector('.main-hero__swiper'));
+
