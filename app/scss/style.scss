@@ -137,6 +137,7 @@ button {
         justify-content: space-between;
         padding: 15px;
         border-radius: 50px;
+        transition: .3s ease-in-out background;
     }
 
     &__burger {
@@ -188,6 +189,12 @@ button {
 
         path {
             transition: .3s ease-in-out fill;
+        }
+    }
+
+    .btn {
+        &.mobile {
+            display: none;
         }
     }
 }
@@ -432,7 +439,7 @@ h1,
 .h1 {
     margin: 0;
     font-family: 'Crimson';
-    font-size: 64px;
+    font-size: clamp(36px, 8vw, 64px);
     font-weight: bold;
     line-height: 120%;
 }
@@ -441,7 +448,7 @@ h2,
 .h2 {
     margin: 0;
     font-family: 'Crimson';
-    font-size: 46px;
+    font-size: clamp(24px, 6vw, 46px);
     line-height: 120%;
     font-weight: 700;
 }
@@ -450,7 +457,7 @@ h3,
 .h3 {
     margin: 0;
     font-family: 'Crimson';
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px);
     line-height: 140%;
     font-weight: 400;
 }
@@ -458,7 +465,7 @@ h3,
 .textm {
     font-family: 'inter';
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     line-height: 150%;
 }
 
@@ -500,6 +507,10 @@ section {
         grid-template-columns: 580px 1fr;
         gap: 120px;
         margin-top: 48px;
+
+        img {
+            border-radius: 10px;
+        }
     }
 
     &__swiper {

@@ -13,4 +13,11 @@
             margin-right: -15px;
         }
     }
+
+    .header {
+        &__box {
+            max-width: 100%;
+            right: calc(-100% - 16px);
+        }
+    }
 }
