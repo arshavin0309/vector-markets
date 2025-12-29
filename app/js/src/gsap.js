@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: section,
                 start: "top 80%",
-                once: true,
-                invalidateOnRefresh: true
+                once: true
             }
         });
 
@@ -47,13 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: "body",
             start: "top top",
             end: "bottom bottom",
-            scrub: true,          // плавная связка с прокруткой,
-            invalidateOnRefresh: true
+            scrub: true,          // плавная связка с прокруткой
         }
     });
 
 })
-
-window.addEventListener('resize', () => {
-    ScrollTrigger.refresh();
-});

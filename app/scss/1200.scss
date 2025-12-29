@@ -21,6 +21,36 @@
             }
         }
 
+        &__lang {
+            display: none;
+
+            &--mobile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                margin-top: 30px;
+
+                &>a,
+                &>div {
+                    display: inline-grid;
+                    gap: 6px;
+                    grid-template-columns: 20px 1fr;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: var(--bege-cards);
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 150%;
+                    font-weight: 300;
+
+                    &.active {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+
         &__burger {
             display: block;
 

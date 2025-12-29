@@ -7,6 +7,10 @@
 
             svg {
                 transform: rotate(45deg);
+
+                path {
+                    fill: var(--hover);
+                }
             }
         }
     }
@@ -58,6 +62,35 @@
             &:hover {
                 path {
                     fill: var(--hover);
+                }
+            }
+        }
+
+        &__lang {
+            &:hover {
+                .header__lang--active {
+                    &::before {
+                        opacity: 1;
+                    }
+
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .header__lang--other {
+                    opacity: 1;
+                    visibility: visible;
+
+                    a {
+                        &:hover {
+                            color: var(--hover);
+
+                            svg {
+                                outline-color: var(--hover);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -113,6 +146,14 @@
                         fill: var(--hover);
                     }
                 }
+            }
+        }
+    }
+
+    .upButton {
+        &:hover {
+            &::before {
+                opacity: 1;
             }
         }
     }

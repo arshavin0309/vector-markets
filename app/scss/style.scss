@@ -81,14 +81,32 @@ button {
     transition: all .2s ease-in-out;
     transform: scale(0);
     pointer-events: none;
-    background: #0b254f;
+    background: radial-gradient(117.75% 117.75% at 50% 50%, #0A0C12 0%, #0D47A1 100%);
     border-radius: 50px;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(51.35% 51.3% at 50% 50%, #0A0C12 0%, #0D47A1 100%);
+        border-radius: 50px;
+        opacity: 0;
+        transition: .3s ease-in-out opacity;
+    }
 
     &.show {
         transition: all 1s ease-in-out;
         transform: scale(1);
         pointer-events: all;
+    }
+
+    svg {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -129,6 +147,111 @@ button {
     left: 0;
     width: 100%;
     z-index: 1000;
+
+    &__right-btns {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__lang {
+        position: relative;
+
+        &--mobile {
+            display: none;
+        }
+
+        &--active {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 16.5px 10px;
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 300;
+            color: var(--white);
+            background: radial-gradient(117.75% 117.75% at 50% 50%, #0A0C12 0%, #0D47A1 100%);
+            white-space: nowrap;
+            border-radius: 50px;
+            text-align: center;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(51.35% 51.3% at 50% 50%, #0A0C12 0%, #0D47A1 100%);
+                border-radius: 50px;
+                opacity: 0;
+                transition: .3s ease-in-out opacity;
+            }
+
+            span {
+                position: relative;
+            }
+
+            svg {
+                transition: .3s ease-in-out transform;
+            }
+        }
+
+        &--other {
+            position: absolute;
+            top: calc(100% + 10px);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            padding: 10px 10px;
+            border-radius: 20px;
+            background: var(--bege-cards);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                .3s ease-in-out visibility,
+                .3s ease-in-out opacity;
+
+            &>a,
+            &>div {
+                display: inline grid;
+                grid-template-columns: 20px 1fr;
+                gap: 6px;
+                align-items: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: var(--black-text);
+                font-size: 18px;
+                line-height: 150%;
+                font-weight: 300;
+                transition: .3s ease-in-out color;
+
+                &.active {
+                    opacity: 0.5;
+                }
+
+                svg {
+                    border-radius: 50px;
+                    outline: 1px solid transparent;
+                    transition: .3s ease-in-out outline-color;
+                }
+            }
+
+            &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: -50px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 
     .container {
         padding-top: 10px;
@@ -173,7 +296,7 @@ button {
 
     .menu {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         align-items: center;
         justify-content: center;
 
@@ -397,6 +520,10 @@ address {
         border-radius: 50px;
         background: var(--white);
         transition: .3s ease-in-out transform;
+
+        path {
+            transition: .3s ease-in-out fill;
+        }
     }
 }
 
