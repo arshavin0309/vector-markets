@@ -107,9 +107,11 @@
 
     .main-contacts {
         &__close {
-            &:hover {
-                path {
-                    fill: var(--hover);
+            &--desktop {
+                &:hover {
+                    path {
+                        fill: var(--hover);
+                    }
                 }
             }
         }

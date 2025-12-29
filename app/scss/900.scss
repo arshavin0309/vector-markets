@@ -1,3 +1,17 @@
 @media (max-width: 900px) {
-    
+    .footer {
+        &__container {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__notice {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        &__copyright {
+            text-align: left;
+        }
+    }
 }

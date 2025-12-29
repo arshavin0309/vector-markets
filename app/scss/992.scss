@@ -12,4 +12,15 @@
             }
         }
     }
+
+    .main-start {
+        &__box {
+            grid-template-columns: 1fr;
+        }
+
+        &__image {
+            order: 1;
+            height: 320px;
+        }
+    }
 }

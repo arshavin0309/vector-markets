@@ -14,10 +14,58 @@
         }
     }
 
+    .btn {
+        width: 100%;
+        padding: 16.5px 56px 16.5px 16.5px;
+        font-size: clamp(15px, 4vw, 18px);
+        line-height: 27px;
+    }
+
     .header {
         &__box {
             max-width: 100%;
             right: calc(-100% - 16px);
+        }
+    }
+
+    .main-platform {
+        h2 {
+            text-align: left;
+        }
+
+        &__btns {
+            .btn {
+                width: 100%;
+            }
+        }
+
+        &__image {
+            height: 241px;
+        }
+    }
+
+    .main-start {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .footer {
+        &__right {
+            gap: 30px;
+            flex-direction: column;
+        }
+    }
+
+    .main-traders {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .main-contacts {
+        &__container {
+            padding: 50px 16px 24px;
         }
     }
 }

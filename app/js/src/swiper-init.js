@@ -1,7 +1,13 @@
 let mainPlatformButtons = new Swiper(".main-platform__buttons", {
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     freeMode: true,
     watchSlidesProgress: true,
+
+    breakpoints: {
+        768: {
+            slidesPerView: 4,
+        }
+    }
 });
 
 let mainPlatformSwiper = new Swiper(".main-platform__swiper", {
@@ -13,9 +19,15 @@ let mainPlatformSwiper = new Swiper(".main-platform__swiper", {
 });
 
 let mainAnalyticsButtons = new Swiper(".main-analytics__buttons", {
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     freeMode: true,
     watchSlidesProgress: true,
+
+    breakpoints: {
+        768: {
+            slidesPerView: 4,
+        }
+    }
 });
 
 let mainAnalyticsSwiper = new Swiper(".main-analytics__swiper", {
@@ -27,7 +39,13 @@ let mainAnalyticsSwiper = new Swiper(".main-analytics__swiper", {
 });
 
 let mainAboutSwiper = new Swiper(".main-about__swiper", {
-    slidesPerView: 5,
+    slidesPerView: 'auto',
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 5,
+        }
+    }
 });
 
 let mainHeroSwiper = new Swiper('.main-hero__swiper', {

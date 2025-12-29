@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('a[href="#contact"]');
     const mainContacts = document.querySelector('.main-contacts');
-    const mainContactsClose = document.querySelector('.main-contacts__close');
+    const mainContactsCloseDesktop = document.querySelector('.main-contacts__close--desktop');
+    const mainContactsCloseMobile = document.querySelector('.main-contacts__close--mobile');
 
     if (mainContacts) {
         links.forEach(link => {
@@ -16,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContacts.classList.remove('show');
     }
 
-    mainContactsClose.addEventListener('click', closeForm);
+    mainContactsCloseDesktop.addEventListener('click', closeForm);
+    mainContactsCloseMobile.addEventListener('click', closeForm);
 
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {

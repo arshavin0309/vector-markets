@@ -306,6 +306,10 @@ address {
 
     &__address {
         grid-column: span 2;
+        display: inline-grid;
+        align-items: center;
+        gap: 10px;
+        grid-template-columns: 20px 1fr;
     }
 
     &__docs {
@@ -535,7 +539,7 @@ section {
         }
 
         p {
-            padding-bottom: 16px;
+            margin-bottom: 16px;
             color: var(--black-text);
         }
 
@@ -573,6 +577,10 @@ section {
             text-align: center;
             transition: .3s ease-in-out color;
             cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &::before {
                 content: '';
@@ -716,6 +724,10 @@ section {
         text-align: center;
     }
 
+    h3 {
+        margin-bottom: 10px;
+    }
+
     &__box {
         display: grid;
         grid-template-columns: 480px 1fr;
@@ -843,10 +855,6 @@ section {
 .main-about {
     padding-top: 130px;
     padding-bottom: 130px;
-    // background:
-    //     linear-gradient(180deg, rgba(10, 12, 18, 1) 5%, rgba(10, 12, 18, 0) 100%) left top / 100% 200px no-repeat,
-    //     linear-gradient(0deg, rgba(10, 12, 18, 1) 5%, rgba(10, 12, 18, 0) 100%) left bottom / 100% 200px no-repeat,
-    //     linear-gradient(137.91deg, #0A0C12 19.85%, #0E2155 123.66%);
 
     background:
         linear-gradient(180deg, rgba(10, 12, 18, 0.7) 5%, rgba(10, 12, 18, 0) 100%) left top / 100% 200px no-repeat,
@@ -877,6 +885,7 @@ section {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top right;
             border-radius: 10px;
         }
     }
@@ -903,6 +912,10 @@ section {
 
     &__swiper {
         margin-top: 100px;
+
+        h2 {
+            margin: 0;
+        }
 
         .swiper-slide {
             height: initial;
@@ -1054,6 +1067,13 @@ section {
         .3s ease-in-out opacity,
         .3s ease-in-out visibility;
 
+    overflow-y: auto;
+
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &.show {
         opacity: 1 !important;
         visibility: visible;
@@ -1064,19 +1084,25 @@ section {
     }
 
     &__close {
-        position: absolute;
-        top: 36px;
-        right: 66px;
-        cursor: pointer;
+        &--desktop {
+            position: absolute;
+            top: 36px;
+            right: 66px;
+            cursor: pointer;
 
-        path {
-            transition: .3s ease-in-out fill;
+            path {
+                transition: .3s ease-in-out fill;
+            }
+        }
+
+        &--mobile {
+            display: none;
         }
     }
 
     &__container {
-        max-width: 730px;
-        padding: 48px 86px;
+        max-width: 500px;
+        padding: 24px;
         background: var(--bege-cards);
         border-radius: 10px;
         transform: translateY(100vh);
@@ -1087,6 +1113,7 @@ section {
         margin-bottom: 16px;
         color: var(--black-text);
         text-align: center;
+        font-size: clamp(24px, 6vw, 30px);
 
         &+p {
             color: var(--black-text);
@@ -1095,12 +1122,13 @@ section {
     }
 
     form {
-        margin-top: 48px;
+        // margin-top: 48px;
+        margin-top: 24px;
 
         input {
             width: 100%;
             margin-bottom: 20px;
-            padding: 15px 20px;
+            padding: 10px 15px;
             margin-top: 10px;
             background: #D8D8D8;
             border: 1px solid #9E9E9E;
@@ -1126,7 +1154,7 @@ section {
 
 .wpcf7-acceptance {
     display: block;
-    margin: 20px 0 36px;
+    margin: 15px 0 20px;
 
     label {
         position: relative;
@@ -1138,12 +1166,13 @@ section {
         &::before {
             content: '';
             display: block;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             border-radius: 5px;
             border: 1px solid #9E9E9E;
             background: #D8D8D8;
             box-sizing: border-box;
+            flex: 0 0 auto;
         }
 
         input {
@@ -1157,10 +1186,10 @@ section {
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 0;
+                    top: calc(50% - 15px);
                     left: 0;
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     background: #D8D8D8 url(../images/checked.svg) center / 30px no-repeat;
                     border: 1px solid #9E9E9E;
                     border-radius: 5px;
