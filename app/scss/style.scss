@@ -21,7 +21,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: clip;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -33,6 +33,10 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        display: none;
     }
 }
 
@@ -229,7 +233,7 @@ address {
 }
 
 .main-bg {
-    overflow-x: clip;
+    position: relative;
 
     &__gradient-1 {
         position: absolute;
